@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NAI Prompt Linker
 // @namespace    https://github.com/cpuopt/NAI-Prompt-Linker
-// @version      2024-02-20
+// @version      1.0.2
 // @description  Import prompts into NovelAI from other editor
 // @author       cpufan
 // @license      GPL-3.0 License
