@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NAI Prompt Linker
-// @namespace    https://github.com/cpuopt/
-// @version      2024-02-19
+// @namespace    https://github.com/cpuopt/NAI-Prompt-Linker
+// @version      2024-02-20
 // @description  Import prompts into NovelAI from other editor
 // @author       cpufan
 // @license      GPL-3.0 License
@@ -12,9 +12,9 @@
 // @grant        GM_setValue
 // @grant        GM_addValueChangeListener
 // @run-at       document-end
-// @updateURL    https://github.com/cpuopt/
-// @downloadURL  https://github.com/cpuopt/
-// @supportURL   https://github.com/cpuopt/
+// @updateURL    https://github.com/cpuopt/NAI-Prompt-Linker/raw/main/NAI-Prompt-Linker.user.js
+// @downloadURL  https://github.com/cpuopt/NAI-Prompt-Linker/raw/main/NAI-Prompt-Linker.user.js
+// @supportURL   https://github.com/cpuopt/NAI-Prompt-Linker/issues
 // ==/UserScript==
 
 (function () {
