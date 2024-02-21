@@ -21,3 +21,4 @@ Import prompts into NovelAI from other editor
 - [ ] [Danbooru 标签超市](https://tags.novelai.dev/)
 - [ ] [NovelAI tag生成器](https://wolfchen.top/tag/)
 - [ ] [魔导绪论](https://magic-tag.netlify.app/)
+- [ ] [NovelAI魔导书](https://thereisnospon.github.io/NovelAiTag/)
