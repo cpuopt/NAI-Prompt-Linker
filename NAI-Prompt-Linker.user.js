@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NAI Prompt Linker
 // @namespace    https://github.com/cpuopt/NAI-Prompt-Linker
-// @version      1.0.6
+// @version      1.0.7
 // @description  Import prompts into NovelAI from other editor
 // @author       cpufan
 // @license      GPL-3.0 License
@@ -79,10 +79,15 @@
         let NAI_save = GM_addValueChangeListener("->NAI", function (key, oldValue, newValue, remote) {
             console.debug(key + ":\n" + oldValue + "=>" + newValue);
             if (newValue != null) {
+                let title = document.title;
+                document.title = "NAI Accepted!";
                 console.debug(newValue.msg, newValue.time, newValue.prompt.prompt, newValue.prompt.uprompt);
                 insert(newValue.prompt.prompt, newValue.prompt.uprompt, newValue.generate);
 
                 GM_setValue("NAI->", { time: newValue.time });
+                setTimeout(() => {
+                    document.title = title;
+                }, 2000);
             }
         });
     } else {
