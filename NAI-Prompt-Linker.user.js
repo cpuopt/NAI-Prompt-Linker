@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NAI Prompt Linker
 // @namespace    https://github.com/cpuopt/NAI-Prompt-Linker
-// @version      1.0.7
+// @version      1.0.8
 // @description  Import prompts into NovelAI from other editor
 // @author       cpufan
 // @license      GPL-3.0 License
@@ -47,7 +47,6 @@
         var insertPrompt = (prompt) => {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                    document.evaluate("//button[text()='Prompt']", document.body, null, 9, null).singleNodeValue.click();
                     setTimeout(() => {
                         insertText(document.querySelector("textarea[placeholder='Write your prompt here. Use tags to sculpt your outputs.']"), prompt);
                     }, opInterval);
@@ -59,7 +58,6 @@
         var insertUndesiredContent = (uprompt) => {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                    document.evaluate("//button[text()='Undesired Content']", document.body, null, 9, null).singleNodeValue.click();
                     setTimeout(() => {
                         insertText(document.querySelector("textarea[placeholder='Write what you want removed from the generation.']"), uprompt);
                     }, opInterval);
