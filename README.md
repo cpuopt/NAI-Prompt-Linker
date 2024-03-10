@@ -10,7 +10,7 @@ Import prompts into NovelAI from other editor
 ## 使用
 在已支持的页面右上角会出现插件面板，在同一浏览器开启NAI网页，点击“发送Prompt到NAI”按钮即可
 
-![](https://p.inari.site/usr/369/65d4712bf3d73.png)
+![](https://cd.xfan.top/f/58sX/NAI-Prompt-Linker.gif)
 
 ## 支持的页面
 
