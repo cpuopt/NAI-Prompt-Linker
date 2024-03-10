@@ -6,7 +6,7 @@ Import prompts into NovelAI from other editor
 ## 安装
 [从Github安装](https://github.com/cpuopt/NAI-Prompt-Linker/raw/main/NAI-Prompt-Linker.user.js)
 
-[从Greasy Fork安装](https://update.greasyfork.org/scripts/487821/NAI%20Prompt%20Linker.user.js)
+[前往Greasy Fork页面](https://greasyfork.org/scripts/487821)
 ## 使用
 在已支持的页面右上角会出现插件面板，在同一浏览器开启NAI网页，点击“发送Prompt到NAI”按钮即可
 
