@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NAI Prompt Linker
 // @namespace    https://github.com/cpuopt/NAI-Prompt-Linker
-// @version      1.0.9
+// @version      1.0.10
 // @description  Import prompts into NovelAI from other editor
 // @author       cpufan
 // @license      GPL-3.0 License
@@ -27,6 +27,12 @@
     if (window.location.href.startsWith("https://novelai.net/image")) {
         console.debug("NAI端加载成功");
         var opInterval = 200;
+
+        /**
+         * @description 向输入框内覆写内容
+         * @param {object} area
+         * @param {string} text
+         */
         var insertText = (area, text) => {
             area.focus();
             document.execCommand("selectAll");
@@ -35,6 +41,10 @@
             area.blur();
         };
 
+        /**
+         * @description 点击生成按钮
+         * @returns
+         */
         var click_generate = () => {
             return new Promise((resolve) => {
                 setTimeout(() => {
@@ -44,6 +54,11 @@
             });
         };
 
+        /**
+         * @description 向正向提示词输入框内覆写内容
+         * @param {string} prompt
+         * @returns
+         */
         var insertPrompt = (prompt) => {
             return new Promise((resolve) => {
                 setTimeout(() => {
@@ -59,6 +74,11 @@
             });
         };
 
+        /**
+         * @description 向反向提示词输入框内覆写内容
+         * @param {string} uprompt
+         * @returns
+         */
         var insertUndesiredContent = (uprompt) => {
             return new Promise((resolve) => {
                 setTimeout(() => {
@@ -74,6 +94,12 @@
             });
         };
 
+        /**
+         *
+         * @param {string} prompt
+         * @param {string} uprompt
+         * @param {boolean} generate 是否直接点击生成
+         */
         async function insert(prompt, uprompt, generate) {
             if (uprompt != null) await insertUndesiredContent(uprompt);
             if (prompt != null) await insertPrompt(prompt);
